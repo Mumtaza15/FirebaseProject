@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/student"
+        android:icon="@drawable/ic_student"
+        android:title="Student"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/matkul"
+        android:icon="@drawable/ic_matkul"
+        android:title="Matkul"
+        app:showAsAction="always"
+        />
+
+</menu>
