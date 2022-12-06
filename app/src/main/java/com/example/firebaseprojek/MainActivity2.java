@@ -83,7 +83,7 @@ public class MainActivity2 extends AppCompatActivity {
             newMatkul.setSks(Sks);
 
             databaseReference.push().setValue(newMatkul);
-            Toast.makeText(this, "Data matkul terkirim", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Data Matkul Terkirim", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -98,16 +98,16 @@ public class MainActivity2 extends AppCompatActivity {
                         key = currentData.getKey();
                         matkul.setNama(currentData.child("nama").getValue().toString());
                         matkul.setHari(currentData.child("hari").getValue().toString());
-                        matkul.setSks(Integer.parseInt(currentData.child("0").getValue().toString()));
+                        matkul.setSks(Integer.parseInt(currentData.child("sks").getValue().toString()));
 //                        Integer.parseInt(matkul.setSks(currentData.child("Sks").getValue().toString()));
                     }
                 }
 
                 updateNama.setText(matkul.getNama());
                 updateHari.setText(matkul.getHari());
-//                updateSKS.setText(matkul.getSks());
+                updateSKS.setText(String.valueOf(matkul.getSks()));
 
-                Toast.makeText(MainActivity2.this, "Data matkul has been shown!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity2.this, "Data Matkul Ditampilkan!", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -125,11 +125,13 @@ public class MainActivity2 extends AppCompatActivity {
         updatedData.setSks(Integer.parseInt(updateSKS.getText().toString()));
 
         databaseReference.child(key).setValue(updatedData);
+
+        Toast.makeText(MainActivity2.this, "Data Matkul Diperbarui!", Toast.LENGTH_SHORT).show();
     }
 
     private void removeData() {
         databaseReference.child(key).removeValue();
-        Toast.makeText(this, "Remove Data Matkul Sucessfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Berhasil Menghapus Data Matkul!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
