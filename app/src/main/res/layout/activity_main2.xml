@@ -84,7 +84,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Nama"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="5dp"
@@ -103,7 +103,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Address"
+        android:text="Hari"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="5dp"

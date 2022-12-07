@@ -68,11 +68,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void removeData() {
-        databaseReference.child(key).removeValue();
-        Toast.makeText(this, "Remove Data Sucessfully!", Toast.LENGTH_SHORT).show();
-    }
-
     private void insertData(){
         Student newStudent = new Student();
         String name = editName.getText().toString();
@@ -123,6 +118,11 @@ public class MainActivity extends AppCompatActivity {
 
         //untuk hapus
 //        databaseReference.child(key).removeValue();
+    }
+
+    private void removeData() {
+        databaseReference.child(key).removeValue();
+        Toast.makeText(this, "Remove Data Sucessfully!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
